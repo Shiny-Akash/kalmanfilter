@@ -19,3 +19,10 @@ kfilter.H = np.array([1]) # sensor model
 kfilter.F = np.array([1]) # state transition matrix
 kfilter.B = np.array([1]) # input matrix
 
+# sensor data
+data_length = 10
+truth = np.arange(1, data_length + 1)
+r1 = 0.01
+r2 = 0.06
+z1 = truth + np.random.normal(0, r1, data_length)
+z2 = truth + np.random.normal(0, r2, data_length)
